@@ -12,6 +12,6 @@ public class CreateBlocks : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	    GameObject block = Instantiate(prefabArray[0]);
+	    GameObject block = Instantiate(prefabArray[Random.Range(0,prefabArray.Length)]);
 	}
 }

@@ -5,13 +5,16 @@ using UnityEngine;
 public class CreateBlocks : MonoBehaviour {
 
         public GameObject[] prefabArray;
+        Rigidbody lastCreated;
 
 	// Use this for initialization
-	void Start () {	
+	void Start () {
+            lastCreated = Instantiate(prefabArray[Random.Range(0,prefabArray.Length)]).GetComponent<Rigidbody>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	    GameObject block = Instantiate(prefabArray[Random.Range(0,prefabArray.Length)]);
+	    if (lastCreated.IsSleeping())
+                lastCreated = Instantiate(prefabArray[Random.Range(0,prefabArray.Length)]).GetComponent<Rigidbody>();
 	}
 }

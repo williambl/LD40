@@ -213,6 +213,7 @@ MonoBehaviour:
   - {fileID: 1382011267671498, guid: d0aeb9387516b47cc9aa69aeb4ffcabe, type: 2}
   - {fileID: 1612753447192076, guid: a4f826b6eb579445eaaf9b3ee7366319, type: 2}
   - {fileID: 1874234208195844, guid: aeb3fce7512764d4ab04c89a23c20699, type: 2}
+  instantiationPosition: {x: 0, y: 5, z: 0}
 --- !u!1 &1896371779
 GameObject:
   m_ObjectHideFlags: 0
@@ -369,7 +370,7 @@ Transform:
   m_GameObject: {fileID: 2043817587}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -4.5, z: 0}
-  m_LocalScale: {x: 20, y: 1, z: 1}
+  m_LocalScale: {x: 20, y: 1, z: 19}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1

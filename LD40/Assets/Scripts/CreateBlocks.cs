@@ -17,7 +17,8 @@ public class CreateBlocks : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	    if (lastCreated.IsSleeping())
+            Debug.Log(lastCreated.velocity.magnitude);
+	    if (lastCreated.velocity.magnitude < 0.1)
                 lastCreated = Instantiate(prefabArray[Random.Range(0, prefabArray.Length)], instantiationPosition, instantiationRotation).GetComponent<Rigidbody>();
             lastCreated.AddForce(Input.GetAxis("Horizontal"), 0, 0, ForceMode.VelocityChange);
             lastCreated.AddTorque(0, 0, Input.GetAxis("Vertical") * torqueMultiplier);

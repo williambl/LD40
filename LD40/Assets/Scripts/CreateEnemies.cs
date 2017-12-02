@@ -5,16 +5,25 @@ using UnityEngine;
 public class CreateEnemies : MonoBehaviour {
 
         public GameObject enemy;
+        public AnimationCurve rate;
+        int timer = 0;
 
         Vector3 pos = new Vector3(8.5f, -2.5f, 0f);
         Quaternion rot = Quaternion.Euler(Vector3.zero);
 
 	// Use this for initialization
 	void Start () {
-	    InvokeRepeating("Create", 0f, 2f);
+	    StartCoroutine(Create ());
 	}
+
+        void Update() {
+        }
 	
-	void Create () {
-	    Instantiate(enemy, pos, rot);	
+	IEnumerator Create () {
+            while (true) {
+	        Instantiate(enemy, pos, rot);
+                timer++;
+                yield return new WaitForSeconds(rate.Evaluate(timer));
+            }
 	}
 }

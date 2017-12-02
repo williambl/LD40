@@ -228,6 +228,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 1723310338786604, guid: f2577b8a7e8224b87b781e2915930c63, type: 2}
+  rate:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 2
+      inSlope: -0.025329882
+      outSlope: -0.025329882
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 200
+      value: 0.5
+      inSlope: -0.0031662888
+      outSlope: -0.0031662888
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1 &1896371779
 GameObject:
   m_ObjectHideFlags: 0

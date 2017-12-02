@@ -214,6 +214,7 @@ MonoBehaviour:
   - {fileID: 1612753447192076, guid: a4f826b6eb579445eaaf9b3ee7366319, type: 2}
   - {fileID: 1874234208195844, guid: aeb3fce7512764d4ab04c89a23c20699, type: 2}
   instantiationPosition: {x: 0, y: 5, z: 0}
+  forceMultiplier: 4
 --- !u!1 &1896371779
 GameObject:
   m_ObjectHideFlags: 0

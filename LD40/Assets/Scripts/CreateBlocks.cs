@@ -8,6 +8,7 @@ public class CreateBlocks : MonoBehaviour {
         public Vector3 instantiationPosition = new Vector3(0, 5, 0);
         Quaternion instantiationRotation = Quaternion.Euler(Vector3.zero);
         Rigidbody lastCreated;
+        public float forceMultiplier;
 
 	// Use this for initialization
 	void Start () {
@@ -18,5 +19,6 @@ public class CreateBlocks : MonoBehaviour {
 	void Update () {
 	    if (lastCreated.IsSleeping())
                 lastCreated = Instantiate(prefabArray[Random.Range(0, prefabArray.Length)], instantiationPosition, instantiationRotation).GetComponent<Rigidbody>();
+            lastCreated.AddForce(Input.GetAxis("Horizontal"), 0, 0, ForceMode.VelocityChange);
 	}
 }

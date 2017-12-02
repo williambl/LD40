@@ -20,5 +20,6 @@ public class CreateBlocks : MonoBehaviour {
 	    if (lastCreated.IsSleeping())
                 lastCreated = Instantiate(prefabArray[Random.Range(0, prefabArray.Length)], instantiationPosition, instantiationRotation).GetComponent<Rigidbody>();
             lastCreated.AddForce(Input.GetAxis("Horizontal"), 0, 0, ForceMode.VelocityChange);
+            lastCreated.AddTorque(0, 0, Input.GetAxis("Vertical"));
 	}
 }

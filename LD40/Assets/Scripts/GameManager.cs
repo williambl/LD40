@@ -22,14 +22,14 @@ public class GameManager : MonoBehaviour {
             Score.score = (int)Score.rawScore - EnemyCounter.counter;
             scoreText.text = Score.score.ToString();
 
-            if (Score.score < 0 || EnemyCounter.counter > 2) {
+            if (Score.score < 0 || EnemyCounter.counter > 50) {
                 Debug.Log("Lost!");
                 Score.lost = true;
                 loseCanvas.SetActive(true);
 
                 if (Score.score < 0)
                     loseText.text = "Score went negative...";
-                else if (EnemyCounter.counter > 2) {
+                else if (EnemyCounter.counter > 50) {
                     loseText.text = "You let too many enemies through!\nScore: " + Score.score;
                 }
             }

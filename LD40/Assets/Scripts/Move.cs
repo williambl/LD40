@@ -4,16 +4,18 @@ using UnityEngine;
 
 public class Move: MonoBehaviour {
 
-        CharacterController control;
+        Rigidbody rigid;
         public Vector3 speed;
 
 	// Use this for initialization
 	void Start () {
-	    control = GetComponent<CharacterController>();	
+	    rigid = GetComponent<Rigidbody>();	
 	}
 	
 	// Update is called once per frame
 	void Update () {
-            control.SimpleMove(speed);
+            rigid.AddForce(speed);
+            if (-rigid.velocity.x < 0.1)
+                speed = new Vector3(speed.x-0.1f, speed.y, speed.z);
 	}
 }

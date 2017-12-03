@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class EnemyCounter: MonoBehaviour {
 
-        public int counter = 0;
+        public static int counter = 0;
         public Text countText;
 
 	// Use this for initialization

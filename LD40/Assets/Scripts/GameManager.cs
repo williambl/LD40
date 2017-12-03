@@ -16,5 +16,8 @@ public class GameManager : MonoBehaviour {
 	    Score.rawScore += 0.01f;
             Score.score = (int)Score.rawScore - EnemyCounter.counter;
             scoreText.text = Score.score.ToString();
+
+            if (Score.score < 0 || EnemyCounter.counter > 200)
+                Debug.Log("Lost!");
 	}
 }

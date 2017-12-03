@@ -394,6 +394,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6d5d5ce2d7c244aa91011693664115c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreText: {fileID: 123968896}
 --- !u!1 &1175822542
 GameObject:
   m_ObjectHideFlags: 0
@@ -594,7 +595,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11a72190904644c70b8850fe32b75c4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  countText: {fileID: 123968896}
 --- !u!1 &1896371779
 GameObject:
   m_ObjectHideFlags: 0

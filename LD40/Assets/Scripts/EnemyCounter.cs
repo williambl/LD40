@@ -1,12 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class EnemyCounter: MonoBehaviour {
 
         public static int counter = 0;
-        public Text countText;
 
 	// Use this for initialization
 	void Start () {
@@ -21,7 +19,6 @@ public class EnemyCounter: MonoBehaviour {
         public void OnTriggerEnter(Collider other) {
             if (other.tag == "Enemy") {
                 counter++;
-                countText.text = counter.ToString();
                 Destroy(other.gameObject);
             }
         }

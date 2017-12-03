@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
 
+        public Text scoreText;
 	// Use this for initialization
 	void Start () {
 		
@@ -13,5 +15,6 @@ public class GameManager : MonoBehaviour {
 	void Update () {
 	    Score.rawScore++;
             Score.score = Score.rawScore - EnemyCounter.counter;
+            scoreText.text = Score.score.ToString();
 	}
 }

@@ -13,8 +13,8 @@ public class GameManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	    Score.rawScore++;
-            Score.score = Score.rawScore - EnemyCounter.counter;
+	    Score.rawScore += 0.01f;
+            Score.score = (int)Score.rawScore - EnemyCounter.counter;
             scoreText.text = Score.score.ToString();
 	}
 }

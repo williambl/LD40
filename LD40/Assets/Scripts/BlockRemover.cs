@@ -17,6 +17,10 @@ public class BlockRemover : MonoBehaviour {
         public void OnTriggerExit (Collider other) {
             if (other.tag == "Block") {
                 Destroy(other.gameObject);
+                Score.rawScore -= 0.5f;
+            } else if (other.tag == "Enemy") {
+                Destroy(other.gameObject);
+                Score.rawScore++;
             }
         }
 }
